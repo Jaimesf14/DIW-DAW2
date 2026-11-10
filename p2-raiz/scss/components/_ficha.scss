@@ -9,15 +9,24 @@
 @use "../tokens" as *;
 
 .hueco-ficha {
+  container-type: inline-size;
+  container-name: hueco_ficha;
   margin-bottom: $space-xl;
 }
 
 .ficha {
   display: flex;
+  flex-direction: column;
   gap: $space-md;
   overflow: hidden;
   border-radius: $radius-md;
   background: var(--color-superficie);
+}
+
+@container hueco_ficha (min-width: 36rem) {
+  .ficha{
+    flex-direction: row;
+  }
 }
 
 .ficha__cuerpo {
