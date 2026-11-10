@@ -9,9 +9,45 @@
 @use "../tokens" as *;
 @use "../mixins" as *;
 
+//movil
 .pagina {
   min-height: 100dvh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+    "cabecera"
+    "heroe"
+    "principal"
+    "consejos"
+    "pie";
 }
+
+//tablet
+@media (min-width: $bp-md) {
+  .pagina{
+    grid-template-columns: 1fr 15rem;
+    grid-template-areas: 
+    "cabecera cabecera"
+    "heroe heroe"
+    "principal consejos"
+    "pie pie";
+  }
+}
+
+//escritorio
+@media (min-width: $bp-lg) {
+  .pagina{
+    margin-inline: auto;
+    max-width: 20 rem;
+  }
+  
+}
+.cabecera { grid-area: cabecera;}
+.heroe {grid-area: heroe;}
+.principal {grid-area: principal;}
+.consejos {grid-area: consejos;}
+.pie {grid-area: pie;}
+
 
 .principal {
   padding: clamp(1rem, 0.5rem + 2vw, 2.5rem); // 👀 A4 · relleno fluido (ya resuelto)
