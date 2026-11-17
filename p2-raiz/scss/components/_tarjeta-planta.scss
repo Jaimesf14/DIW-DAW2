@@ -11,7 +11,7 @@
     flex-direction: column;
     gap: $space-xs;
     padding: $space-md;
-    border: $space-xs solid $color-brand-primary;
+    border: 3px solid $color-brand-primary;
     border-radius: $radius-md;
     
 }
@@ -46,7 +46,7 @@
 }
 
 .tarjeta-planta--oferta {
-    border: $space-xs solid $color-accent;
+    border: 3px solid $color-accent;
 }
 .tarjeta-planta--oferta .tarjeta-planta__etiqueta{
     background-color: $color-accent;
@@ -54,7 +54,7 @@
 }
 
 .tarjeta-planta--agotada {
-    border: $space-xs solid $color-muted;
+    border: 3px solid $color-muted;
     background-color: silver;
 }
 
