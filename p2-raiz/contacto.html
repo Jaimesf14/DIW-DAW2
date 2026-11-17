@@ -22,19 +22,25 @@
 
     <!-- Pongo flex-1 en el body para que el main no quede en mitad de la página, ya que hace que el main ocupe todo el espacio en blanco -->
     <main class="flex-1">
-      <h1 class="p-4 text-xl font-bold text-tierra border-b-3 border-marca" >Contacto</h1>
+      <h1 class="p-4 text-xl font-bold text-tierra border-b-3 border-marca">Contacto</h1>
 
-      <div class="flex flex-col pt-4">
-        <section class=" ml-4 mr-4 p-4 bg-fondo rounded-lg ">
+      <!-- para crear dos columnas desde el tamaño md pongo md:flex-row -->
+      <div class="flex flex-col md:flex-row md:gap-4 md:grid-cols-2 pt-4">
+        <section class="p-4 md:w-1/2">
           <h2 class="font-bold text-marca">El vivero</h2>
-          <p class="pt-2 pb-2">Abrimos de lunes a sábado, de 9:00 a 14:00. Si vienes en persona, te ayudamos a elegir.</p>
+          <p class="pt-2 pb-2">
+            Abrimos de lunes a sábado, de 9:00 a 14:00. Si vienes en persona, te ayudamos a elegir.
+          </p>
           <p>Envíos gratis desde 40 €</p>
         </section>
 
-        <form class="p-4 gap-4 pt-4 flex flex-col">
+        <form class="p-4 gap-4 flex flex-col mx-4 p-4 bg-fondo rounded-lg md:w-1/2 md:grid-cols-2">
           <label>
             Nombre:
-            <input class="border-2 border-marca rounded-md w-full focus-visible"
+            <!-- para que el boton cambie de color al seleccionarlo, como especifica el enunciado , pongo focus-visible:ring-tierra.
+             Tambien he puesto w-full, que es para que el input ocupe todo el anchjo de la pagina -->
+            <input
+              class="border-2 border-marca rounded-md w-full focus-visible:ring-tierra"
               id="nombre"
               name="nombre"
               autocomplete="name"
@@ -43,7 +49,8 @@
           </label>
           <label>
             Correo:
-            <input class="border-2 border-marca rounded-md w-full focus-visible"
+            <input
+              class="border-2 border-marca rounded-md w-full focus-visible:ring-tierra"
               id="correo"
               name="correo"
               type="email"
@@ -53,14 +60,17 @@
           </label>
           <label>
             ¿En qué te ayudamos?
-            <textarea class="border-2 border-marca rounded-md resize-y w-full focus-visible"
+            <textarea
+              class="border-2 border-marca rounded-md resize-y w-full focus-visible:ring-tierra"
               id="mensaje"
               name="mensaje"
               rows="4"
               required
             ></textarea>
           </label>
+          <!-- para que el boton cambie de color al pasar el rraton por encima, como especifica el enunciado , pongo hover:bg-marca-oscuro -->
           <button
+            class="p-4 border border-2 border-marca rounded-md bg-marca font-bold text-white hover:bg-marca-oscuro focus-visible:ring-tierra"
             type="submit"
           >
             Enviar
