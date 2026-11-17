@@ -21,31 +21,29 @@
     </header>
 
     <!-- Pongo flex-1 en el body para que el main no quede en mitad de la página, ya que hace que el main ocupe todo el espacio en blanco -->
-    <main class="max-w-5xl mx-auto p-6 flex-1">
-      <h1 class="text-3xl font-bold text-marca-oscuro mb-6">Contacto</h1>
+    <main class="flex-1">
+      <h1 class="p-4 text-xl font-bold text-tierra border-b-3 border-marca" >Contacto</h1>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <section class="bg-marca-suave p-6 rounded-lg" aria-label="Dónde estamos">
-          <h2 class="text-xl font-bold mb-4">El vivero</h2>
-          <p class="mb-4">Abrimos de lunes a sábado, de 9:00 a 14:00. Si vienes en persona, te ayudamos a elegir.</p>
+      <div class="flex flex-col pt-4">
+        <section class=" ml-4 mr-4 p-4 bg-fondo rounded-lg ">
+          <h2 class="font-bold text-marca">El vivero</h2>
+          <p class="pt-2 pb-2">Abrimos de lunes a sábado, de 9:00 a 14:00. Si vienes en persona, te ayudamos a elegir.</p>
           <p>Envíos gratis desde 40 €</p>
         </section>
 
-        <form class="flex flex-col gap-4" action="#">
-          <label class="flex flex-col gap-2" for="nombre">
-            Nombre
-            <input
-              class="border border-marca-oscuro rounded-md p-2"
+        <form class="p-4 gap-4 pt-4 flex flex-col">
+          <label>
+            Nombre:
+            <input class="border-2 border-marca rounded-md w-full focus-visible"
               id="nombre"
               name="nombre"
               autocomplete="name"
               required
             />
           </label>
-          <label class="flex flex-col gap-2" for="correo">
-            Correo
-            <input
-              class="border border-marca-oscuro rounded-md p-2"
+          <label>
+            Correo:
+            <input class="border-2 border-marca rounded-md w-full focus-visible"
               id="correo"
               name="correo"
               type="email"
@@ -53,10 +51,9 @@
               required
             />
           </label>
-          <label class="flex flex-col gap-2" for="mensaje">
+          <label>
             ¿En qué te ayudamos?
-            <textarea
-              class="border border-marca-oscuro rounded-md p-2"
+            <textarea class="border-2 border-marca rounded-md resize-y w-full focus-visible"
               id="mensaje"
               name="mensaje"
               rows="4"
@@ -64,7 +61,6 @@
             ></textarea>
           </label>
           <button
-            class="bg-marca text-white px-5 py-2 rounded-md hover:bg-marca-oscuro focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tierra"
             type="submit"
           >
             Enviar
