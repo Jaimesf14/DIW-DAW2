@@ -6,47 +6,73 @@
     <title>Contacto · RAÍZ</title>
     <link rel="stylesheet" href="/src/tailwind.css" />
   </head>
-  <body>
+  <!-- Pongo esto en el body para que el footer no quede en mitad de la página -->
+  <body class="min-h-screen flex flex-col">
     <!-- ✍️ B3 · Esta página va SOLO con Tailwind (src/tailwind.css), sin SASS. Ponle las clases de utilidad:
          los colores de RAÍZ (del @theme), dos columnas desde md y un botón con hover: y focus-visible:.
          Nada de valores sueltos entre corchetes ni style="". -->
-    <header>
-      <a href="/">RAÍZ</a>
-      <nav aria-label="Principal">
+    <header class="bg-marca text-white p-4 flex justify-between items-center">
+      <a href="/" class="font-bold">RAÍZ</a>
+      <nav class="flex gap-4" aria-label="Principal">
         <a href="/">Inicio</a>
         <a href="/producto.html">Monstera</a>
         <a href="/contacto.html" aria-current="page">Contacto</a>
       </nav>
     </header>
 
-    <main>
-      <h1>Contacto</h1>
+    <!-- Pongo flex-1 en el body para que el main no quede en mitad de la página, ya que hace que el main ocupe todo el espacio en blanco -->
+    <main class="max-w-5xl mx-auto p-6 flex-1">
+      <h1 class="text-3xl font-bold text-marca-oscuro mb-6">Contacto</h1>
 
-      <div>
-        <section aria-label="Dónde estamos">
-          <h2>El vivero</h2>
-          <p>Abrimos de lunes a sábado, de 9:00 a 14:00. Si vienes en persona, te ayudamos a elegir.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section class="bg-marca-suave p-6 rounded-lg" aria-label="Dónde estamos">
+          <h2 class="text-xl font-bold mb-4">El vivero</h2>
+          <p class="mb-4">Abrimos de lunes a sábado, de 9:00 a 14:00. Si vienes en persona, te ayudamos a elegir.</p>
           <p>Envíos gratis desde 40 €</p>
         </section>
 
-        <form action="#">
-          <label for="nombre">
+        <form class="flex flex-col gap-4" action="#">
+          <label class="flex flex-col gap-2" for="nombre">
             Nombre
-            <input id="nombre" name="nombre" autocomplete="name" required />
+            <input
+              class="border border-marca-oscuro rounded-md p-2"
+              id="nombre"
+              name="nombre"
+              autocomplete="name"
+              required
+            />
           </label>
-          <label for="correo">
+          <label class="flex flex-col gap-2" for="correo">
             Correo
-            <input id="correo" name="correo" type="email" autocomplete="email" required />
+            <input
+              class="border border-marca-oscuro rounded-md p-2"
+              id="correo"
+              name="correo"
+              type="email"
+              autocomplete="email"
+              required
+            />
           </label>
-          <label for="mensaje">
+          <label class="flex flex-col gap-2" for="mensaje">
             ¿En qué te ayudamos?
-            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            <textarea
+              class="border border-marca-oscuro rounded-md p-2"
+              id="mensaje"
+              name="mensaje"
+              rows="4"
+              required
+            ></textarea>
           </label>
-          <button type="submit">Enviar</button>
+          <button
+            class="bg-marca text-white px-5 py-2 rounded-md hover:bg-marca-oscuro focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tierra"
+            type="submit"
+          >
+            Enviar
+          </button>
         </form>
       </div>
     </main>
 
-    <footer>RAÍZ, vivero online · Cádiz</footer>
+    <footer class="bg-marca-oscuro text-white text-center p-4">RAÍZ, vivero online · Cádiz</footer>
   </body>
 </html>

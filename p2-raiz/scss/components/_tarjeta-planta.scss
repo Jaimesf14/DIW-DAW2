@@ -1,68 +1,72 @@
 // _tarjeta-planta.scss — ✍️ B1 · la tarjeta de una planta en BEM
-//
 // Mira _boton.scss (👀): así es un bloque BEM con sus modificadores.
 // ✍️ B1. Primero las clases en index.html (las 6 <article> de .destacados), después su estilo aquí:
 //    - el bloque .tarjeta-planta y sus elementos (__imagen, __nombre, __descripcion, __precio, __boton, __etiqueta);
 //    - los modificadores --oferta (que se note) y --agotada (la imagen en gris);
 //    - especificidad plana: una clase por selector (o .tarjeta-planta--mod .tarjeta-planta__elem). Sin etiquetas ni ids.
 @use "../tokens" as *;
-.tarjeta-planta{
-    display: flex;
-    flex-direction: column;
-    gap: $space-xs;
-    padding: $space-md;
-    border: 3px solid $color-brand-primary;
-    border-radius: $radius-md;
-    
+
+.tarjeta-planta {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+  padding: $space-md;
+  border: 3px solid $color-brand-primary;
+  border-radius: $radius-md;
 }
+
 .tarjeta-planta__imagen {
-    width: 100%;
-    height: 35%;
-    border-radius: $radius-md;
-    object-fit: cover;
+  width: 100%;
+  height: 35%;
+  border-radius: $radius-md;
+  object-fit: cover;
 }
+
 .tarjeta-planta__nombre {
-    font-size: 1.2em;
-    font-weight: bold;
+  font-size: 1.2em;
+  font-weight: bold;
 }
+
 .tarjeta-planta__descripcion {
-    font-size: 0.9em;    
+  font-size: 0.9em;
 }
+
 .tarjeta-planta__precio {
-    font-size: $space-md;
-    font-weight: bold;
-
+  font-size: $space-md;
+  font-weight: bold;
 }
+
 .tarjeta-planta__boton {
-    align-self: flex-start;
-
+  align-self: flex-start;
 }
+
 .tarjeta-planta__etiqueta {
-    padding: $space-sm;
-    border-radius: 0.5em;
-    background-color: $color-brand-soft;
-    color: $color-text;
-    font-size: 0.9em;
+  padding: $space-sm;
+  border-radius: 0.5em;
+  background-color: $color-brand-soft;
+  color: $color-text;
+  font-size: 0.9em;
 }
 
 .tarjeta-planta--oferta {
-    border: 3px solid $color-accent;
+  border: 3px solid $color-accent;
 }
-.tarjeta-planta--oferta .tarjeta-planta__etiqueta{
-    background-color: $color-accent;
-    color: $color-surface;
+
+.tarjeta-planta--oferta .tarjeta-planta__etiqueta {
+  background-color: $color-accent;
+  color: $color-surface;
 }
 
 .tarjeta-planta--agotada {
-    border: 3px solid $color-muted;
-    background-color: silver;
+  border: 3px solid $color-muted;
+  background-color: $color-muted;
 }
 
-.tarjeta-planta--agotada .tarjeta-planta__etiqueta{
-    background-color: $color-muted;
-    color: $color-surface;
+.tarjeta-planta--agotada .tarjeta-planta__etiqueta {
+  background-color: $color-muted;
+  color: $color-surface;
 }
 
 .tarjeta-planta--agotada .tarjeta-planta__imagen {
-    filter: grayscale(100%);
+  filter: grayscale(100%);
 }

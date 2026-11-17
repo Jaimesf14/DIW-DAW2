@@ -1,5 +1,4 @@
 // _layout.scss — ✍️ A1 · el esqueleto de la página de inicio con Grid (el relleno fluido, A4, ya está puesto)
-//
 // ✍️ A1. La .pagina tiene cinco hijos: .cabecera, .heroe, .principal, .consejos y .pie.
 //    - En móvil (sin media query): un grid con grid-template-areas, una columna, en ese orden.
 //    - Desde $bp-md: dos columnas (la del principal se estira; la de los consejos, un ancho fijo en rem).
@@ -9,12 +8,12 @@
 @use "../tokens" as *;
 @use "../mixins" as *;
 
-//movil
+// movil
 .pagina {
   min-height: 100dvh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: 
+  grid-template-areas:
     "cabecera"
     "heroe"
     "principal"
@@ -22,32 +21,45 @@
     "pie";
 }
 
-//tablet
+// tablet
 @media (min-width: $bp-md) {
-  .pagina{
+  .pagina {
     grid-template-columns: 1fr 15rem;
-    grid-template-areas: 
-    "cabecera cabecera"
-    "heroe heroe"
-    "principal consejos"
-    "pie pie";
+    grid-template-areas:
+      "cabecera cabecera"
+      "heroe heroe"
+      "principal consejos"
+      "pie pie";
   }
 }
 
-//escritorio
+// escritorio
 @media (min-width: $bp-lg) {
-  .pagina{
+  .pagina {
     margin-inline: auto;
     max-width: 20 rem;
   }
-  
 }
-.cabecera { grid-area: cabecera;}
-.heroe {grid-area: heroe;}
-.principal {grid-area: principal;}
-.consejos {grid-area: consejos;}
-.pie {grid-area: pie;}
 
+.cabecera {
+  grid-area: cabecera;
+}
+
+.heroe {
+  grid-area: heroe;
+}
+
+.principal {
+  grid-area: principal;
+}
+
+.consejos {
+  grid-area: consejos;
+}
+
+.pie {
+  grid-area: pie;
+}
 
 .principal {
   padding: clamp(1rem, 0.5rem + 2vw, 2.5rem); // 👀 A4 · relleno fluido (ya resuelto)
