@@ -15,8 +15,10 @@
   color: var(--color-sobre-marca);
   text-decoration: none;
   background: var(--color-marca);
+  //cambia el cursor a la mano para saber que se puede seleccionar
   cursor: pointer;
 
+  //para cuando pasas elraton por encima
   &:hover {
     background: var(--color-marca-fuerte);
   }

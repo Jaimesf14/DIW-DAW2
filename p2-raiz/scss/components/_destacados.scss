@@ -26,5 +26,6 @@
 
   // para el espacio entre las tarjetas:
   gap: 16px;
+  // Con repeat(auto-fit, minmax(MÍNIMO, 1fr)) el propio Grid decide cuántas columnas caben: ninguna media query.
   grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
 }
