@@ -34,30 +34,33 @@
           <p>Envíos gratis desde 40 €</p>
         </section>
 
-        <form class="p-4 gap-4 flex flex-col mx-4 p-4 bg-fondo rounded-lg md:w-1/2 md:grid-cols-2">
-          <label>
-            Nombre:
-            <!-- para que el boton cambie de color al seleccionarlo, como especifica el enunciado , pongo focus-visible:ring-tierra.
-             Tambien he puesto w-full, que es para que el input ocupe todo el anchjo de la pagina -->
-            <input
-              class="border-2 border-marca rounded-md w-full focus-visible:ring-tierra"
-              id="nombre"
-              name="nombre"
-              autocomplete="name"
-              required
-            />
-          </label>
-          <label>
-            Correo:
-            <input
-              class="border-2 border-marca rounded-md w-full focus-visible:ring-tierra"
-              id="correo"
-              name="correo"
-              type="email"
-              autocomplete="email"
-              required
-            />
-          </label>
+        <form class="p-4 gap-4 flex flex-col mx-4 p-4 bg-fondo rounded-lg md:w-1/2 grid-cols-1 md:grid-cols-2">
+          <div class="flex flex-col md:flex-row md:gap-4 md:grid-cols-2">
+            <label class="md:col-span-1">
+              Nombre:
+              <!-- para que el boton cambie de color al seleccionarlo, como especifica el enunciado , pongo focus-visible:ring-tierra.
+              Tambien he puesto w-full, que es para que el input ocupe todo el anchjo de la pagina -->
+              <input
+                class="border-2 border-marca rounded-md w-full focus-visible:ring-tierra"
+                id="nombre"
+                name="nombre"
+                autocomplete="name"
+                required
+              />
+            </label>
+            <label>
+              Correo:
+              <input
+                class="border-2 border-marca rounded-md w-full focus-visible:ring-tierra"
+                id="correo"
+                name="correo"
+                type="email"
+                autocomplete="email"
+                required
+              />
+            </label>
+          </div>
+
           <label>
             ¿En qué te ayudamos?
             <textarea
@@ -70,7 +73,7 @@
           </label>
           <!-- para que el boton cambie de color al pasar el rraton por encima, como especifica el enunciado , pongo hover:bg-marca-oscuro -->
           <button
-            class="p-4 border border-2 border-marca rounded-md bg-marca font-bold text-white hover:bg-marca-oscuro focus-visible:ring-tierra"
+            class="md:cold-span-2 p-4 border border-2 border-marca rounded-md bg-marca font-bold text-white hover:bg-marca-oscuro focus-visible:ring-tierra"
             type="submit"
           >
             Enviar
